@@ -112,8 +112,8 @@ body,html{height:100%;margin:0;font-family:Poppins,Inter,Segoe UI,Roboto,Arial}
 .options input{transform:scale(1.02)}
 .forgot{text-decoration:none;color:var(--muted)}
 
-.btn-signin{display:inline-block;width:320px;padding:14px 18px;border-radius:32px;border:0;color:white;font-weight:600;background:linear-gradient(90deg,#6e33d9 0%, #8a4af7 45%, #b067ff 100%);box-shadow:0 22px 46px rgba(109,45,206,0.18);cursor:pointer;font-size:16px;text-align:center;margin-top:6px;position:relative}
-.btn-signin::after{content:"";position:absolute;inset:0;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,0.06),transparent);pointer-events:none}
+.btn-signin{display:block;width:280px;max-width:80%;padding:14px 18px;border-radius:32px;border:0;color:white;font-weight:700;background:linear-gradient(90deg,#6e33d9 0%, #8a4af7 45%, #b067ff 100%);box-shadow:0 22px 46px rgba(109,45,206,0.18);cursor:pointer;font-size:16px;text-align:center;margin:18px auto 0;position:relative;z-index:1}
+.btn-signin::after{content:"";position:absolute;inset:0;border-radius:32px;background:linear-gradient(180deg,rgba(255,255,255,0.06),transparent);pointer-events:none;z-index:0}
 .btn-signin:hover{filter:brightness(1.03)}
 .btn-signin:active{transform:translateY(1px)}
 
