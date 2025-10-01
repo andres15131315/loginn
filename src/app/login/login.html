@@ -17,18 +17,29 @@
 
       <form class="signin-form" novalidate>
         <label class="input-group">
-          <span class="input-icon" aria-hidden="true"></span>
+          <span class="input-icon" aria-hidden="true">
+            <!-- user icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+              <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="#c6c6c6" />
+              <path d="M4 20c0-3.314 2.686-6 6-6h4c3.314 0 6 2.686 6 6v1H4v-1z" fill="#e6e6e6" />
+            </svg>
+          </span>
           <input type="text" placeholder="Username or email" aria-label="Username or email" />
         </label>
 
         <label class="input-group">
-          <span class="input-icon" aria-hidden="true"></span>
+          <span class="input-icon" aria-hidden="true">
+            <!-- lock icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+              <path d="M17 8h-1V6c0-2.761-2.239-5-5-5S6 3.239 6 6v2H5c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2z" fill="#e6e6e6" />
+            </svg>
+          </span>
           <input type="password" placeholder="Password" aria-label="Password" />
         </label>
 
         <div class="options">
           <div class="options-left"><label class="remember"><input type="checkbox" /> Remember me</label></div>
-          <div class="options-right"><a class="forgot" routerLink="#">Forgot password?</a></div>
+          <div class="options-right"><a class="forgot" href="#">Forgot password?</a></div>
         </div>
 
         <button class="btn-signin" type="button">Sign In</button>
