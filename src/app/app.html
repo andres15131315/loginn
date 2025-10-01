@@ -1,0 +1,84 @@
+<!-- Login view (static styles only) -->
+
+<main class="login-page">
+  <div class="login-card">
+    <section class="login-left" aria-hidden="true">
+      <div class="branding">
+        <h2 class="welcome">Welcome back!</h2>
+        <p class="lead">You can sign in to access with your existing account.</p>
+      </div>
+      <div class="decor" aria-hidden="true">
+        <!-- Decorative SVG contours, blobs and small icons -->
+        <svg class="decor-svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#7b2bff" stop-opacity="0.18" />
+              <stop offset="1" stop-color="#a85cff" stop-opacity="0.12" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#g1)" />
+          <!-- soft blobs -->
+          <circle cx="180" cy="160" r="110" fill="#ffffff" fill-opacity="0.04" />
+          <circle cx="320" cy="320" r="140" fill="#ffffff" fill-opacity="0.03" />
+          <!-- darker triangular overlay top-right -->
+          <polygon points="520,0 800,0 800,120" fill="rgba(0,0,0,0.08)" />
+          <!-- thin contour lines (abstract) -->
+          <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+            <path d="M40 60 C120 20, 160 40, 220 20 S 340 10, 420 60" stroke-opacity="0.18" />
+            <path d="M60 420 C140 360, 200 380, 280 420 S 380 480, 460 420" stroke-opacity="0.14" />
+          </g>
+          <!-- dotted grid -->
+          <g fill="#ffffff" opacity="0.9">
+            <circle cx="560" cy="40" r="2" />
+            <circle cx="582" cy="60" r="2" />
+            <circle cx="604" cy="80" r="2" />
+            <circle cx="560" cy="64" r="2" />
+            <circle cx="582" cy="84" r="2" />
+          </g>
+          <!-- small plus and circle accents -->
+          <g stroke="#ffffff" stroke-width="2" fill="none" opacity="0.9">
+            <path d="M60 40 L68 40 M64 36 L64 44" stroke-opacity="0.9" />
+            <circle cx="120" cy="480" r="10" stroke-opacity="0.12" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="login-right" role="region" aria-label="Sign in form">
+      <h3 class="signin-title">Sign In</h3>
+
+      <form class="signin-form" novalidate>
+        <label class="input-group">
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="#BDBDBD"/>
+              <path d="M3 21c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#E0E0E0" stroke-width="1.2" fill="none"/>
+            </svg>
+          </span>
+          <input type="text" placeholder="Username or email" aria-label="Username or email" />
+        </label>
+
+        <label class="input-group">
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="10" width="16" height="10" rx="2" stroke="#E0E0E0" stroke-width="1.2" fill="#FFF"/>
+              <path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="#BDBDBD" stroke-width="1.2" fill="none"/>
+            </svg>
+          </span>
+          <input type="password" placeholder="Password" aria-label="Password" />
+        </label>
+
+        <div class="options">
+          <div class="options-left"><label class="remember"><input type="checkbox" /> Remember me</label></div>
+          <div class="options-right"><a class="forgot" href="#">Forgot password?</a></div>
+        </div>
+
+        <button class="btn-signin" type="button">Sign In</button>
+
+        <p class="signup">New here? <a href="#">Create an Account</a></p>
+      </form>
+    </section>
+  </div>
+
+  <router-outlet />
+</main>

@@ -1,0 +1,135 @@
+/* Estilos para la vista de login estática (solo diseño) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+:root{
+  --bg-left-1: #6c3cd6; /* purple gradient start */
+  --bg-left-2: #9b5cff; /* purple gradient end */
+  --card-radius: 16px;
+  --muted: #8b8b8b;
+  --text-dark: #3b3b3b;
+}
+
+*{box-sizing:border-box}
+body,html{height:100%;margin:0;font-family:Poppins,Inter,Segoe UI,Roboto,Arial}
+
+.login-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background: linear-gradient(180deg,#efe8fb 0%, #f7f3ff 100%);
+}
+
+.login-card{
+  width:100%;
+  max-width:1200px;
+  height:620px;
+  display:flex;
+  border-radius:28px; /* bigger rounded corners like the image */
+  overflow:hidden;
+  box-shadow:0 24px 60px rgba(20,20,40,0.12);
+  background:#fff; /* white card like reference */
+}
+
+.login-left{
+  flex:1.35; /* slightly larger left panel like image */
+  background: linear-gradient(180deg,#5f2bd6 0%, #7b2bff 30%, #8a4af7 60%, #6c3cd6 100%);
+  color: white;
+  padding:64px 72px 64px 88px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.branding .welcome{
+  font-size:64px;
+  margin:0 0 12px 0;
+  font-weight:800;
+  line-height:1.02;
+  color:#ffffff;
+  text-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+.branding .lead{
+  margin:12px 0 0 0;
+  max-width:520px;
+  color:rgba(255,255,255,0.95);
+  font-size:18px;
+}
+
+.login-left .decor-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:overlay}
+
+/* add a faint inner vignette for depth */
+.login-left::before{
+  content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 40% 40%, rgba(0,0,0,0.02), transparent 40%);pointer-events:none;border-radius:inherit;
+}
+
+.login-right{
+  flex:0.85; /* slightly narrower right panel */
+  background: #fff;
+  padding:64px 100px 64px 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center; /* center vertically */
+  align-items:center; /* center horizontally */
+  /* ensure right corners are rounded as in image */
+  border-top-right-radius:28px;
+  border-bottom-right-radius:28px;
+}
+
+.signin-title{
+  font-size:38px;
+  margin:0 0 22px 0;
+  color:#4b4b4b;
+  font-weight:800;
+  text-align:left;
+  width:100%;
+  max-width:360px;
+}
+
+
+.signin-form{max-width:420px;width:100%;display:flex;flex-direction:column;align-items:center}
+.input-group{display:flex;align-items:center;gap:12px;border:1px solid #e6e6ea;padding:16px 20px;border-radius:999px;margin-bottom:18px;background:#fff;width:100%;max-width:360px;box-shadow:inset 0 2px 0 rgba(255,255,255,0.6), 0 6px 18px rgba(0,0,0,0.04)}
+.input-group input{border:0;outline:none;font-size:15px;width:100%;background:transparent;color:#9b9b9b;padding-left:6px}
+.input-group input::placeholder{color:#cfcfcf}
+.input-group::placeholder{color:#cfcfcf}
+.input-group input::placeholder{color:#cfcfcf}
+.input-icon{color:#c6c6c6;font-size:14px;display:inline-flex;align-items:center}
+
+/* lighter thin border and interior highlight */
+.input-group{border:1px solid rgba(34,34,34,0.06)}
+.input-icon{color:var(--muted);font-size:14px;display:inline-flex;align-items:center}
+
+/* place small lock/user SVGs inside inputs */
+.input-icon svg{width:16px;height:16px;display:block}
+
+
+.options{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;color:var(--muted);font-size:14px;width:100%;max-width:360px}
+.options .remember{gap:8px}
+.options-left{flex:1}
+.options-right{flex:1;text-align:right}
+.options .remember{display:flex;align-items:center;gap:8px}
+.options input{transform:scale(1.02)}
+.forgot{text-decoration:none;color:var(--muted)}
+
+.btn-signin{display:inline-block;width:320px;padding:14px 18px;border-radius:32px;border:0;color:white;font-weight:600;background:linear-gradient(90deg,#6e33d9 0%, #8a4af7 45%, #b067ff 100%);box-shadow:0 22px 46px rgba(109,45,206,0.18);cursor:pointer;font-size:16px;text-align:center;margin-top:6px;position:relative}
+.btn-signin::after{content:"";position:absolute;inset:0;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,0.06),transparent);pointer-events:none}
+.btn-signin:hover{filter:brightness(1.03)}
+.btn-signin:active{transform:translateY(1px)}
+
+
+.signup{margin-top:22px;color:var(--muted);font-size:14px;text-align:center;width:100%;max-width:360px}
+.signup a{color:#7b2bff;text-decoration:none}
+
+.signin-form .input-group:first-of-type{margin-top:6px}
+
+/* small layout tweaks to align right panel content centered vertically like image */
+.login-right .signin-form{margin-top:6px}
+
+
+/* Responsive */
+@media (max-width:900px){
+  .login-card{flex-direction:column;height:auto}
+  .login-left{padding:36px 28px}
+  .login-right{padding:28px}
+}
